@@ -1,12 +1,15 @@
 'use strict';
 
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { ConfigModule } from '@nestjs/config';
+import { AppNewModule } from './app/';
+import { BelvoModule } from './belvo';
 
 @Module({
-	imports: [],
-	controllers: [AppController],
-	providers: [AppService],
+    imports: [
+        ConfigModule.forRoot({ isGlobal: true }),
+        AppNewModule,
+        BelvoModule
+    ]
 })
 export class AppModule { };
