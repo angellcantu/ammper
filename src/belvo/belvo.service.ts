@@ -22,8 +22,8 @@ export class BelvoService {
         let credentials: string = this.credentials();
         let body = {
             link: '2822f341-61fd-458f-a487-10417230f6c2',
-            date_from: '2024-03-04',
-            date_to: '2024-06-06',
+            date_from: '2024-05-01',
+            date_to: '2024-06-07',
             save_data: true
         };
         let { data }: AxiosResponse = await firstValueFrom(
